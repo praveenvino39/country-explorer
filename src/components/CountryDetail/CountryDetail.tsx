@@ -53,8 +53,7 @@ const CountryDetail: FC<Props> = ({ country, showAddToFav, showDetail }) => {
                 <View style={{ alignItems: 'center', gap: 10, marginTop: 20 }}>
                     <Text fontWeight='900' fontSize={16}>Timezones</Text>
                     <View style={{ gap: 12 }}>
-                        <Text textAlign='center'>{country.area.kilometres.toLocaleString() + "km"}</Text>
-                        <Text textAlign='center'>{country.area.miles.toLocaleString() + "mi"}</Text>
+                        {country.timezones.map((lang) => <Text key={lang} textAlign='center'>{lang}</Text>)}
                     </View>
                 </View>
                 <View style={{ alignItems: 'center', gap: 10, marginTop: 20 }}>

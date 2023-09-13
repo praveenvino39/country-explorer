@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ActivityIndicator, Button, StatusBar, StyleSheet, View, useColorScheme } from 'react-native';
+import { ActivityIndicator, Button, ScrollView, StatusBar, StyleSheet, View, useColorScheme } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import TextField from '../../components/TextField/TextField';
@@ -37,15 +37,17 @@ function SearchScreen() {
 
     return (
         <View style={[backgroundStyle, styles.screen]}>
-            <View style={styles.actionContainer}>
-                <View style={{ flex: 1 }}>
-                    <TextField text={text} onChangeText={(text) => setText(text)} placeHolder='Enter country name' />
+            <ScrollView>
+                <View style={styles.actionContainer}>
+                    <View style={{ flex: 1 }}>
+                        <TextField text={text} onChangeText={(text) => setText(text)} placeHolder='Enter country name' />
+                    </View>
+                    <Button testID='search-button' onPress={handleSearchCountry} title='Search' />
                 </View>
-                <Button testID='search-button' onPress={handleSearchCountry} title='Search' />
-            </View>
-            {country && !error && <CountryDetail showDetail showAddToFav country={country} />}
-            {error && <View style={{ marginTop: 100 }}><Text textAlign='center'>{error}</Text></View>}
-            {loading && <View style={{ marginTop: 100 }}><ActivityIndicator /></View>}
+                {country && !error && <CountryDetail showDetail showAddToFav country={country} />}
+                {error && <View style={{ marginTop: 100 }}><Text textAlign='center'>{error}</Text></View>}
+                {loading && <View style={{ marginTop: 100 }}><ActivityIndicator /></View>}
+            </ScrollView>
         </View>
     )
 }

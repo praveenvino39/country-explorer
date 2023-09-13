@@ -40,6 +40,7 @@ const useStorage = () => {
         countries.splice(removeIndex, 1)
         await AsyncStorage.setItem(STORAGE_KEY.FAVOURITES, JSON.stringify(countries))
     }
+
     return {
         getCountryFromCache,
         setCountryToCache,
