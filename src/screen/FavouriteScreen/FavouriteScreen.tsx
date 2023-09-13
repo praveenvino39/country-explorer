@@ -1,13 +1,11 @@
 import React, { FC, useEffect, useState } from 'react'
 import Text from '../../components/Text/Text'
-import { SafeAreaView } from 'react-native-safe-area-context'
 import useStorage from '../../hooks/useStorage'
-import { MaterialTopTabScreenProps } from '@react-navigation/material-top-tabs'
 import { useNavigation } from '@react-navigation/native'
 import { FlatList, View, useColorScheme } from 'react-native'
 import CountryDetail from '../../components/CountryDetail/CountryDetail'
 import { Colors } from 'react-native/Libraries/NewAppScreen'
-import { globalStyles } from '../../../App'
+import { globalStyles } from '../../globalStyles'
 
 
 const FavouriteScreen = () => {

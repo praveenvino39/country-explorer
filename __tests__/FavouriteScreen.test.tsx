@@ -4,7 +4,11 @@ import FavouriteScreen from '../src/screen/FavouriteScreen/FavouriteScreen';
 
 jest.mock('@react-navigation/native', () => ({
     useNavigation: jest.requireActual('../__mocks__/useNavigation').useNavigation,
+    useHeaderHeight: (): number => 0,
 }));
+
+
+
 
 describe('FavouriteScreen', () => {
 

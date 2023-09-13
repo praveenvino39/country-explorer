@@ -63,7 +63,7 @@ function MainNavigator(): JSX.Element {
 
   return (
 
-    <Tab.Navigator initialRouteName='Search' >
+    <Tab.Navigator initialRouteName='Favourite' >
 
       <Tab.Screen
         options={{
@@ -91,15 +91,6 @@ function MainNavigator(): JSX.Element {
   );
 }
 
-export const globalStyles = StyleSheet.create({
-  screen: {
-    flex: 1,
-  },
-  actionContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: 16
-  }
-})
+
 
 export default App;

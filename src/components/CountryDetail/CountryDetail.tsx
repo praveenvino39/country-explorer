@@ -1,8 +1,8 @@
 import React, { FC, useState } from 'react'
 import { Button, Modal, StyleSheet, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native'
 import Text from '../Text/Text'
-import { SvgUri } from 'react-native-svg'
 import useStorage from '../../hooks/useStorage'
+import { SvgUri } from 'react-native-svg'
 
 type Props = {
     country: Country,
